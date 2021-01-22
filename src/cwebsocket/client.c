@@ -771,7 +771,7 @@ ssize_t cwebsocket_client_write_data(cwebsocket_client *websocket, const char *d
 		return -1;
 	}
 
-	uint32_t header_length = 6 + (payload_len > 125 ? 2 : 0) + (payload_len > 0xffff ? 8 : 0);
+	uint32_t header_length = 6 + (payload_len > 125 ? 2 : 0) + (payload_len > 0xffff ? 6 : 0);
 	uint8_t masking_key[4];
 	uint8_t header[header_length];
 	ssize_t bytes_written;
