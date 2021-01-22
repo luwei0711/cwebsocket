@@ -66,10 +66,10 @@
 #endif
 
 #define htonl64(p) {\
-	(char)(((p & ((uint64_t)0xff <<  0)) >>  0) & 0xff), (char)(((p & ((uint64_t)0xff <<  8)) >>  8) & 0xff), \
-	(char)(((p & ((uint64_t)0xff << 16)) >> 16) & 0xff), (char)(((p & ((uint64_t)0xff << 24)) >> 24) & 0xff), \
-	(char)(((p & ((uint64_t)0xff << 32)) >> 32) & 0xff), (char)(((p & ((uint64_t)0xff << 40)) >> 40) & 0xff), \
-	(char)(((p & ((uint64_t)0xff << 48)) >> 48) & 0xff), (char)(((p & ((uint64_t)0xff << 56)) >> 56) & 0xff) }
+    (char)(((p & ((uint64_t)0xff << 56)) >> 56) & 0xff), (char)(((p & ((uint64_t)0xff << 48)) >> 48) & 0xff), \
+    (char)(((p & ((uint64_t)0xff << 40)) >> 40) & 0xff), (char)(((p & ((uint64_t)0xff << 32)) >> 32) & 0xff), \
+    (char)(((p & ((uint64_t)0xff << 24)) >> 24) & 0xff), (char)(((p & ((uint64_t)0xff << 16)) >> 16) & 0xff), \
+    (char)(((p & ((uint64_t)0xff <<  8)) >>  8) & 0xff), (char)(((p & ((uint64_t)0xff <<  0)) >>  0) & 0xff) }
 
 #ifndef CWS_HANDSHAKE_BUFFER_MAX
 	#define CWS_HANDSHAKE_BUFFER_MAX 256  // bytes
